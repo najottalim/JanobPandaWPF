@@ -28,7 +28,7 @@ namespace JanobPandaWPF
 
         }
 
-        private void startBtn_Click(object sender, RoutedEventArgs e)
+        /*private void startBtn_Click(object sender, RoutedEventArgs e)
         {
             Hide();
         }
@@ -36,7 +36,7 @@ namespace JanobPandaWPF
         private void mainStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
-        }
+        }*/
     }
 
 }
