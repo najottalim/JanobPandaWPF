@@ -27,6 +27,16 @@ namespace JanobPandaWPF
             InitializeComponent();
 
         }
+
+        private void startBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
+
+        private void mainStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 
 }

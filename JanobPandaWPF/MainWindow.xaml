@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JanobPandaWPF"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="dotnet.microsoft.com" Height="450" MinWidth="1000">
     <Window.Resources>
         <Style x:Key="menuTextBlockStyle" TargetType="TextBlock">
@@ -33,7 +34,7 @@
         </Style>
     </Window.Resources>
     <ScrollViewer>
-        <StackPanel>
+        <StackPanel x:Name="mainStackPanel" MouseDown="mainStackPanel_MouseDown">
             <Grid Background="#190649" Height="500">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
@@ -76,7 +77,7 @@
                         building all your apps.
                             </TextBlock>
                             <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 30">
-                                <Button Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
+                                <Button x:Name="startBtn" Click="startBtn_Click" Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
                                 <Button Content="Download" Margin="20 0 50 0" Style="{StaticResource entryBtnStyle}"/>
                             </DockPanel>
                             <TextBlock Text="Supported on Windows, Linux, and MacOS" Foreground="Snow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 140 0"/>
