@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JanobPandaWPF.Pages;
+using JanobPandaWPF.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,17 +27,21 @@ namespace JanobPandaWPF
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
-        private void startBtn_Click(object sender, RoutedEventArgs e)
+        private void signUpPage_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
+            mainFrame.Content = new SignUp();
         }
 
-        private void mainStackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        private void SignInPage_Click(object sender, RoutedEventArgs e)
         {
-            this.DragMove();
+            mainFrame.Content = new SignIn();
+        }
+
+        private void CardsPage_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Content = new Cards();
         }
     }
 

@@ -1,0 +1,23 @@
+﻿<Page x:Class="JanobPandaWPF.Pages.Cards"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JanobPandaWPF.Pages" xmlns:usercontrols="clr-namespace:JanobPandaWPF.UserControls"
+      mc:Ignorable="d" 
+      Background="White"
+      Title="Cards">
+    <ScrollViewer ScrollViewer.VerticalScrollBarVisibility="Auto">
+        <WrapPanel>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+            <usercontrols:BookCard Margin="10"/>
+        </WrapPanel>
+    </ScrollViewer>
+    
+</Page>

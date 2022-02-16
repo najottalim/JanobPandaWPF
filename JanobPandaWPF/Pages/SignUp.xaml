@@ -1,0 +1,20 @@
+﻿<Page x:Class="JanobPandaWPF.Pages.SignUp"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:JanobPandaWPF.Pages"
+      mc:Ignorable="d" 
+      Height="400" Width="400">
+
+    <Border CornerRadius="10" Background="DodgerBlue">
+        <StackPanel Width="300" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox md:HintAssist.IsFloating="True" md:TextFieldAssist.PrefixText="+998" md:HintAssist.Hint="Enter your phone" Margin="0 0 0 10" Padding="5" />
+            <TextBox md:HintAssist.IsFloating="True" md:TextFieldAssist.PrefixText="+998" md:HintAssist.Hint="Enter your phone" Margin="0 0 0 10" Padding="5" />
+            <TextBox md:HintAssist.IsFloating="True" md:TextFieldAssist.PrefixText="+998" md:HintAssist.Hint="Enter your phone" Margin="0 0 0 10" Padding="5" />
+            <TextBox md:HintAssist.IsFloating="True" md:TextFieldAssist.PrefixText="+998" md:HintAssist.Hint="Enter your phone" Margin="0 0 0 10" Padding="5" />
+            <Button x:Name="signUpBtn" Click="signUpBtn_Click" Content="Sign Up"/>
+        </StackPanel>
+    </Border>
+</Page>

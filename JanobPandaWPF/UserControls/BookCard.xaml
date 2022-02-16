@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="JanobPandaWPF.UserControls.BookCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+            xmlns:local="clr-namespace:JanobPandaWPF.Pages"
+            mc:Ignorable="d" 
+            Height="300" Width="300">   
+    <Border CornerRadius="10" Background="Aqua">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="0" RadiusX="90" RadiusY="90" Width="160" Margin="20">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/JanobPandaWPF;Component/Images/user.jpg"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <DockPanel Grid.Row="1" HorizontalAlignment="Center">
+                <StackPanel Background="White" VerticalAlignment="Center" Margin="20 0 20 0">
+                    <TextBlock Text="180" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Followers"/>
+                </StackPanel>
+                <StackPanel Background="White" VerticalAlignment="Center" Margin="20 0 20 0">
+                    <TextBlock Text="1000" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Follows"/>
+                </StackPanel>
+            </DockPanel>
+
+        </Grid>
+    </Border>
+</UserControl>

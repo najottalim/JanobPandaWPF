@@ -4,239 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JanobPandaWPF"
-        mc:Ignorable="d"
-        WindowStyle="None"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="dotnet.microsoft.com" Height="450" MinWidth="1000">
     <Window.Resources>
-        <Style x:Key="menuTextBlockStyle" TargetType="TextBlock">
-            <Style.Setters>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="20 3 20 0"/>
-            </Style.Setters>
-        </Style>
-        <Style x:Key="entryBtnStyle" TargetType="Button">
-            <Style.Setters>
-                <Setter Property="Width" Value="180"/>
-                <Setter Property="Height" Value="40"/>
-                <Setter Property="FontSize" Value="17"/>
-                <Setter Property="Background" Value="#8324B4"/>
-                <Setter Property="Foreground" Value="White"/>
-                <Setter Property="BorderThickness" Value="1"/>
-                <Setter Property="BorderBrush" Value="Snow"/>
-            </Style.Setters>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        <ResourceDictionary Source="ResourceDirectories/ButtonStyle.xaml"/>
     </Window.Resources>
-    <ScrollViewer>
-        <StackPanel x:Name="mainStackPanel" MouseDown="mainStackPanel_MouseDown">
-            <Grid Background="#190649" Height="500">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0" Background="White">
-                    <DockPanel Margin="60 0 60 0">
-                        <Image Source="/JanobPandaWPF;Component/Images/microsoft.png" Width="120" Height="30"/>
-                        <Border BorderThickness="2 0 0 0" Height="25" BorderBrush="Black" Margin="15 0 15 0"/>
-                        <TextBlock Text=".NET" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold"/>
-                        <TextBlock Text="Why .NET" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Features" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Learn" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Docs" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Downloads" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Community" Style="{StaticResource menuTextBlockStyle}"/>
-                        <Border BorderThickness="1" CornerRadius="3" Height="30" Width="60" BorderBrush="Black">
-                            <TextBlock Text="LIVE TV" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                        <TextBlock Text="All Microsoft" Style="{StaticResource menuTextBlockStyle}" HorizontalAlignment="Right"/>
-                    </DockPanel>
-                </Grid>
-
-                <Grid Grid.Row="1">
-                    <Image Source="/JanobPandaWPF;Component/Images/background.png" Width="900" Stretch="UniformToFill" HorizontalAlignment="Right"/>
-                    <Grid Margin="80 0 60 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Image Grid.Column="0" Source="/JanobPandaWPF;Component/Images/20year.png" Width="250" Height="250"/>
-                        <Grid Grid.Column="1" Height="220" VerticalAlignment="Center">
-                            <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Snow" FontWeight="Bold">
-                        Free. Cross-platform. Open 
-                        <LineBreak />
-                        source. A developer platform for 
-                        <LineBreak/>
-                        building all your apps.
-                            </TextBlock>
-                            <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 30">
-                                <Button x:Name="startBtn" Click="startBtn_Click" Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
-                                <Button Content="Download" Margin="20 0 50 0" Style="{StaticResource entryBtnStyle}"/>
-                            </DockPanel>
-                            <TextBlock Text="Supported on Windows, Linux, and MacOS" Foreground="Snow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 140 0"/>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid Background="#190649" Height="500">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-
-                    <Grid Grid.Row="0" Background="White">
-                        <DockPanel Margin="60 0 60 0">
-                            <Image Source="/JanobPandaWPF;Component/Images/microsoft.png" Width="120" Height="30"/>
-                            <Border BorderThickness="2 0 0 0" Height="25" BorderBrush="Black" Margin="15 0 15 0"/>
-                            <TextBlock Text=".NET" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold"/>
-                            <TextBlock Text="Why .NET" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Features" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Learn" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Docs" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Downloads" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Community" Style="{StaticResource menuTextBlockStyle}"/>
-                            <Border BorderThickness="1" CornerRadius="3" Height="30" Width="60" BorderBrush="Black">
-                                <TextBlock Text="LIVE TV" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            </Border>
-                            <TextBlock Text="All Microsoft" Style="{StaticResource menuTextBlockStyle}" HorizontalAlignment="Right"/>
-                        </DockPanel>
-                    </Grid>
-
-                    <Grid Grid.Row="1">
-                        <Image Source="/JanobPandaWPF;Component/Images/background.png" Width="900" Stretch="UniformToFill" HorizontalAlignment="Right"/>
-                        <Grid Margin="80 0 60 0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Image Grid.Column="0" Source="/JanobPandaWPF;Component/Images/20year.png" Width="250" Height="250"/>
-                            <Grid Grid.Column="1" Height="220" VerticalAlignment="Center">
-                                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Snow" FontWeight="Bold">
-                        Free. Cross-platform. Open 
-                        <LineBreak />
-                        source. A developer platform for 
-                        <LineBreak/>
-                        building all your apps.
-                                </TextBlock>
-                                <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 30">
-                                    <Button Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
-                                    <Button Content="Download" Margin="20 0 50 0" Style="{StaticResource entryBtnStyle}"/>
-                                </DockPanel>
-                                <TextBlock Text="Supported on Windows, Linux, and MacOS" Foreground="Snow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 140 0"/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
-            <Grid Background="#190649" Height="500">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <Grid Grid.Row="0" Background="White">
-                    <DockPanel Margin="60 0 60 0">
-                        <Image Source="/JanobPandaWPF;Component/Images/microsoft.png" Width="120" Height="30"/>
-                        <Border BorderThickness="2 0 0 0" Height="25" BorderBrush="Black" Margin="15 0 15 0"/>
-                        <TextBlock Text=".NET" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold"/>
-                        <TextBlock Text="Why .NET" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Features" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Learn" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Docs" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Downloads" Style="{StaticResource menuTextBlockStyle}"/>
-                        <TextBlock Text="Community" Style="{StaticResource menuTextBlockStyle}"/>
-                        <Border BorderThickness="1" CornerRadius="3" Height="30" Width="60" BorderBrush="Black">
-                            <TextBlock Text="LIVE TV" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                        <TextBlock Text="All Microsoft" Style="{StaticResource menuTextBlockStyle}" HorizontalAlignment="Right"/>
-                    </DockPanel>
-                </Grid>
-
-                <Grid Grid.Row="1">
-                    <Image Source="/JanobPandaWPF;Component/Images/background.png" Width="900" Stretch="UniformToFill" HorizontalAlignment="Right"/>
-                    <Grid Margin="80 0 60 0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Image Grid.Column="0" Source="/JanobPandaWPF;Component/Images/20year.png" Width="250" Height="250"/>
-                        <Grid Grid.Column="1" Height="220" VerticalAlignment="Center">
-                            <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Snow" FontWeight="Bold">
-                        Free. Cross-platform. Open 
-                        <LineBreak />
-                        source. A developer platform for 
-                        <LineBreak/>
-                        building all your apps.
-                            </TextBlock>
-                            <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 30">
-                                <Button Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
-                                <Button Content="Download" Margin="20 0 50 0" Style="{StaticResource entryBtnStyle}"/>
-                            </DockPanel>
-                            <TextBlock Text="Supported on Windows, Linux, and MacOS" Foreground="Snow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 140 0"/>
-                        </Grid>
-                    </Grid>
-                </Grid>
-                <Grid Background="#190649" Height="500">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-
-                    <Grid Grid.Row="0" Background="White">
-                        <DockPanel Margin="60 0 60 0">
-                            <Image Source="/JanobPandaWPF;Component/Images/microsoft.png" Width="120" Height="30"/>
-                            <Border BorderThickness="2 0 0 0" Height="25" BorderBrush="Black" Margin="15 0 15 0"/>
-                            <TextBlock Text=".NET" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold"/>
-                            <TextBlock Text="Why .NET" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Features" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Learn" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Docs" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Downloads" Style="{StaticResource menuTextBlockStyle}"/>
-                            <TextBlock Text="Community" Style="{StaticResource menuTextBlockStyle}"/>
-                            <Border BorderThickness="1" CornerRadius="3" Height="30" Width="60" BorderBrush="Black">
-                                <TextBlock Text="LIVE TV" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            </Border>
-                            <TextBlock Text="All Microsoft" Style="{StaticResource menuTextBlockStyle}" HorizontalAlignment="Right"/>
-                        </DockPanel>
-                    </Grid>
-
-                    <Grid Grid.Row="1">
-                        <Image Source="/JanobPandaWPF;Component/Images/background.png" Width="900" Stretch="UniformToFill" HorizontalAlignment="Right"/>
-                        <Grid Margin="80 0 60 0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Image Grid.Column="0" Source="/JanobPandaWPF;Component/Images/20year.png" Width="250" Height="250"/>
-                            <Grid Grid.Column="1" Height="220" VerticalAlignment="Center">
-                                <TextBlock FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Snow" FontWeight="Bold">
-                        Free. Cross-platform. Open 
-                        <LineBreak />
-                        source. A developer platform for 
-                        <LineBreak/>
-                        building all your apps.
-                                </TextBlock>
-                                <DockPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0 0 0 30">
-                                    <Button Content="Get Started" Style="{StaticResource entryBtnStyle}"/>
-                                    <Button Content="Download" Margin="20 0 50 0" Style="{StaticResource entryBtnStyle}"/>
-                                </DockPanel>
-                                <TextBlock Text="Supported on Windows, Linux, and MacOS" Foreground="Snow" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 140 0"/>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
-
-        </StackPanel>
-    </ScrollViewer>
-   
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="mainFrame" NavigationUIVisibility="Hidden" Grid.Row="0"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="signUpPage" Click="signUpPage_Click" Content="Sign Up page" Margin="10 0 10 0"/>
+            <Button Grid.Column="1" Name="SignInPage" Click="SignInPage_Click" Content="Sign In page" Margin="10 0 10 0"/>
+            <Button Grid.Column="2" Name="CardsPage" Click="CardsPage_Click" Content="Sign In page" Margin="10 0 10 0"/>
+        </Grid>
+        
+    </Grid>
+    
 </Window>
